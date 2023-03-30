@@ -1,0 +1,17 @@
+.game-end {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: var(--spacing-small);
+	padding: var(--spacing-small);
+}
+
+.game-end-button {
+	width: 100%;
+	background-color: var(--color-primary);
+	color: var(--color-zero);
+	font: var(--font-title);
+	padding: var(--spacing-small);
+	border: var(--spacing-border-small) solid var(--color-zero);
+}

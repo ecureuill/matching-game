@@ -1,0 +1,31 @@
+html, body, #root {
+	min-height: 100vh;
+	max-height: 100vh;
+	overflow: hidden;
+
+}
+
+#root{
+	background-color: var(--color-quinary);
+	color: var(--color-zero);
+	border: var(--spacing-border) solid var(--color-zero);
+	padding: var(--spacing-medium);
+	
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	padding-bottom: var(--spacing-medium);
+}
+
+main {
+	flex: 1 1;
+	overflow: scroll;	
+}
+
+
+button {
+	cursor: pointer;
+}
+

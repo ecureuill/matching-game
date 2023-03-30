@@ -1,0 +1,23 @@
+.score-board {
+	width: fit-content;
+	display: flex;
+	gap: var(--spacing-small);
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	padding-top: var(--spacing-small) ;
+}
+
+.arrow-down {
+	position: absolute;
+	top: -10px;
+	transition: transform 400ms ease-in-out;
+}
+
+.arrow-down.player-1 {
+	transform: translateX(-160%);
+}
+
+.arrow-down.player-2 {
+	transform: translateX(160%);
+}
