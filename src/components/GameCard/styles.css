@@ -1,0 +1,81 @@
+.card-game {
+	width: var(--spacing-card-width);
+	max-width: var(--spacing-card-width);
+	height: var(--spacing-card-height);
+	max-height: var(--spacing-card-height);
+
+	background: var(--color-negative);
+	border: var(--spacing-border) solid var(--color-zero);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card-game:hover:not(:disabled), .card-game:focus {
+	transform: scale(.98);
+  transition: transform 400ms ease-in-out;	
+  outline: 5px solid green;
+}
+
+
+.card-game.-back {
+	background: var(--color-negative);
+}
+
+.card-game.-front {
+	background: var(--color-primary);
+}
+
+.card-game>img {
+	height: 94px;
+	width: 94px;
+	object-fit: contain;
+}
+
+.flip-card-wrapper {
+  background-color: transparent;
+  width: var(--spacing-card-width);
+  height: var(--spacing-card-height);
+  perspective: 400px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s cubic-bezier(0.42, 0, 0.54, 1.68);
+  transform-style: preserve-3d;
+}
+
+.flip-card{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card.-front {
+  transform: rotateY(180deg);
+}
+
+.flip-card-wrapper.-flipped.matching-undefined .card-game.-front {
+	border-color: var(--color-senary);
+}
+
+.flip-card-wrapper.-flipped.matching-true .card-game.-front {
+	border-color: var(--color-secondary);
+}
+
+.flip-card-wrapper.-flipped.matching-false .card-game.-front {
+	border-color: #600000;
+}
+
+.flip-card-wrapper.-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+

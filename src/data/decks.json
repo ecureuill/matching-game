@@ -1,0 +1,36 @@
+{
+	"back": {
+		"image": "images/alura.png"
+	},
+	"front": [
+		{
+			"name": "css",
+			"image": "images/css.png"
+		},
+		{
+			"name": "html",
+			"image": "images/html.png"
+		},
+		{
+			"name": "javascript",
+			"image": "images/javascript.png"
+		},
+		{
+			"name": "nodejs",
+			"image": "images/nodejs.png"
+		},
+		{
+			"name": "restapi",
+			"image": "images/restapi.png"
+		},
+		{
+			"name": "tdd",
+			"image": "images/tdd.png"
+		},
+		{
+			"name": "ux",
+			"image": "images/ux.png"
+		}
+	] 
+
+}

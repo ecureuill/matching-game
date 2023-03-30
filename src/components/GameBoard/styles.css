@@ -1,0 +1,15 @@
+.game-board {
+	display: grid;
+	grid-template-columns: repeat(var(--spacing-columns), 1fr);
+	grid-gap: var(--spacing-medium);
+	width: calc(
+		var(--spacing-columns)*var(--spacing-card-width) + 
+		var(--spacing-columns)*var(--spacing-medium));
+	overflow: hidden;
+	margin: 0 auto;
+	padding: var(--spacing-small) 0;
+}
+
+.dialog {
+	margin: auto;
+}

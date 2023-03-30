@@ -1,0 +1,17 @@
+.text.-body{
+	font: var(--font-body);
+}
+
+.text.-label{
+	font: var(--font-label);
+	color: var(--color-senary);
+}
+
+.text.-title {
+	font: var(--font-title);
+	color: var(--color-secondary);
+}
+
+.text.-subtitle {
+	font: var(--font-subtitle);
+}

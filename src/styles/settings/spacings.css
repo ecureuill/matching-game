@@ -1,0 +1,13 @@
+:root {
+	--spacing-border-small: 2px;
+	--spacing-border: 4px;
+	--spacing-xsmall: 6px;
+	--spacing-small: 10px;
+	--spacing-medium: 20px;
+
+	--spacing-card-width: 130px;
+	--spacing-card-height: 160px;
+
+	--spacing-columns: 2;
+
+}
