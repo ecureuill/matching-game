@@ -25,4 +25,27 @@
 
 .game-score .score.-active {
 	background-color:var(--color-secondary);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.score.-active::before,
+.score.-active::after {
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 2px;
+    background-color:var(--color-zero);
+
+}
+
+.score.-active::before {
+    transform: rotate(45deg);
+}
+
+.score.-active::after {
+    transform: rotate(-45deg);
 }
