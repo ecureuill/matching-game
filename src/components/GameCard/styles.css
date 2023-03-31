@@ -18,13 +18,44 @@
   outline: 5px solid green;
 }
 
+.card-game {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	gap: var(--spacing-xsmall);
+	color: var(--color-negative);
+}
 
 .card-game.-back {
 	background: var(--color-negative);
 }
 
+.card-game.-back::after {
+	background: var(--color-zero);
+	content: attr(data-index);
+	width: 20px;
+	height: 20px;
+	align-self: self-end;
+	font: var(--font-label-small);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .card-game.-front {
 	background: var(--color-primary);
+}
+
+.card-game.-front::after {
+	background: var(--color-zero);
+	content: attr(data-matching);
+	width: 20px;
+	height: 20px;
+	align-self: self-end;
+	font: var(--font-label-small);
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .card-game>img {

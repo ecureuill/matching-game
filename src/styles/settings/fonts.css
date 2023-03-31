@@ -1,5 +1,6 @@
 :root {
 	--font-family: 'Press Start 2P';
+	--font-label-small: 10px var(--font-family);
 	--font-label: 14px var(--font-family);
 	--font-body: 16px var(--font-family);
 	--font-subtitle: 18px var(--font-family);

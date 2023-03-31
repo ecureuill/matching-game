@@ -33,10 +33,14 @@ const GameCard = ( {card, id, flipped, matching, index, role}: GameCardProps & I
 					className={`flip-card card-game -back`}
 					onClick={() => onClick()}
 					aria-label={`carta ${index+1}`}
+				 	data-index={index+1}
 				>
 					<img src={deck.back.image} alt={''}/>
 				</button>
-				<div className={`flip-card card-game -front`} >
+				<div 
+					className={`flip-card card-game -front`}
+					data-matching={matching === undefined? '': matching? '✔': '✖'}
+				>
 					<img src={card.image} alt={`card ${card.name}`}/>
 				</div>
 			</div>
