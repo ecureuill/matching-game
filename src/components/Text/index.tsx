@@ -5,10 +5,10 @@ type TextProps = {
 	type: 'body' | 'title' | 'subtitle' | 'label'
 };
 
-const Text = ( props: PropsWithChildren<TextProps> & React.BaseHTMLAttributes<Element>): JSX.Element => {
+const Text = ( {id, className, type, children}: PropsWithChildren<TextProps> & React.BaseHTMLAttributes<Element>): JSX.Element => {
 	return (
-		<span  {...props} className={`text -${props.type} ${props.className !== undefined? props.className : '' }`}>
-			{props.children}
+		<span  id={id} className={`text -${type} ${className !== undefined? className : '' }`}>
+			{children}
 		</span>
 	);
 }
