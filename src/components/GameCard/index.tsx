@@ -30,13 +30,15 @@ const GameCard = ( {card, id, flipped, matching, index, role, statusRef}: GameCa
 		<div role={role} className={`flip-card-wrapper ${getFlipped(id)? '-flipped': ''}  matching-${matching}`}>
 			<div className="flip-card-inner">
 				<button
-					disabled={disabled} /*don´t allow new moviments while gameStatus is waiting*/
-					tabIndex={getFlipped(id)? -1 : 0} /*don´t allow tab through flipped cards*/
+					disabled={disabled || getFlipped(id)} 	/*don´t allow new moviments while gameStatus is waiting*/
+															/*don´t allow tab through flipped cards*/
 					className={`flip-card card-game -back`}
 					onClick={() => onClick()}
 					aria-label={`carta ${index+1}`}
+				 	aria-describedby={`btn-${index}-description`}
 				 	data-index={index+1}
 				>
+					<span id={`btn-${index}-description`} className='visually-hidden'>Vire a carta</span>
 					<img src={deck.back.image} alt={''}/>
 				</button>
 				<div 
