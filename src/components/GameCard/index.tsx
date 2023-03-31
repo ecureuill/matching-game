@@ -6,16 +6,18 @@ import './styles.css';
 type GameCardProps = {
 	id: string,
 	index: number,
-	role: string
+	role: string, 
+	statusRef: React.RefObject<HTMLSpanElement>
  };
 
-const GameCard = ( {card, id, flipped, matching, index, role}: GameCardProps & ICardStates): JSX.Element => {
+const GameCard = ( {card, id, flipped, matching, index, role, statusRef}: GameCardProps & ICardStates): JSX.Element => {
 	
 	const { deck, setFlipped, getFlipped, gameStatus } = useContext(GameContext);
 	const [ disabled, setDisabled ] = useState(false);
 
 	const onClick = () => {
-		setFlipped(id)
+		setFlipped(id);
+		(statusRef.current! as HTMLSpanElement).innerText= `Virou a carta ${card.name}`;
 	}
 
 	useEffect(() => {
@@ -44,9 +46,6 @@ const GameCard = ( {card, id, flipped, matching, index, role}: GameCardProps & I
 					<img src={card.image} alt={`card ${card.name}`}/>
 				</div>
 			</div>
-		</div>
-		<div role='status' aria-live='assertive' className='visually-hidden'>
-			{getFlipped(id) && <span>Virou a carta {card.name}</span>}
 		</div>
 		</>
 	);
