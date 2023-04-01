@@ -12,6 +12,10 @@ import './styles/elements/base.css';
 import App from './pages/App';
 import { GameProvider } from './contexts/GameContext';
 
+if (process.env.NODE_ENV !== 'production') {
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
+}
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
