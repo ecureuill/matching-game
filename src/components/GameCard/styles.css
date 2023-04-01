@@ -12,12 +12,6 @@
 	align-items: center;
 }
 
-.card-game:hover:not(:disabled), .card-game:focus {
-	transform: scale(.98);
-  transition: transform 400ms ease-in-out;	
-  outline: 5px solid green;
-}
-
 .card-game {
 	display: flex;
 	flex-direction: column;

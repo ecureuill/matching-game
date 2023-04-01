@@ -24,8 +24,16 @@ main {
 	overflow: scroll;	
 }
 
-
 button {
 	cursor: pointer;
 }
 
+button:disabled {
+	cursor: initial;
+}
+
+button:hover:not(:disabled), button:focus {
+	transform: scale(.98);
+  transition: transform 400ms ease-in-out;	
+  outline: 5px solid green;
+}
